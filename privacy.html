@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Reverse Prompt Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --panel: #161a23;
+      --panel-2: #1d2330;
+      --text: #eef2ff;
+      --muted: #aeb8d0;
+      --line: rgba(255, 255, 255, 0.08);
+      --accent: #7a58ff;
+      --accent-2: #39c2ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(122, 88, 255, 0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(57, 194, 255, 0.16), transparent 24%),
+        var(--bg);
+      line-height: 1.7;
+    }
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .hero {
+      padding: 28px 28px 22px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+    }
+
+    h1, h2 {
+      margin: 0 0 12px;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 34px;
+    }
+
+    h2 {
+      margin-top: 28px;
+      font-size: 20px;
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .meta {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .section {
+      margin-top: 18px;
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+    }
+
+    .note {
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: var(--panel-2);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    a {
+      color: #9ad8ff;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Privacy Policy</h1>
+      <p>AI Reverse Prompt is a Chrome extension that analyzes a user-selected image and generates bilingual reverse prompts for image generation workflows.</p>
+      <div class="meta">Last updated: 2026-04-01</div>
+    </section>
+
+    <section class="section">
+      <h2>1. Overview</h2>
+      <p>This extension uses a BYOK model, which means each user provides their own supported third-party AI provider API key.</p>
+      <ul>
+        <li>API keys are stored only in the current browser session.</li>
+        <li>API keys are not uploaded to or stored on any developer-owned server.</li>
+        <li>The current version does not use a developer backend.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>2. Data We Process</h2>
+      <p>When the user explicitly triggers image analysis, the extension may process:</p>
+      <ul>
+        <li>The selected image URL or image bytes.</li>
+        <li>The current page URL associated with the selected image.</li>
+        <li>Generated prompt results, including positive prompts, negative prompts, bilingual text, style summary, and confidence metadata.</li>
+        <li>User-saved prompt collection data stored locally in the browser.</li>
+        <li>User-provided API keys stored in Chrome extension session storage only.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>3. How Data Is Used</h2>
+      <p>Processed data is used only to provide the extension’s core functionality:</p>
+      <ul>
+        <li>Analyze a user-selected image.</li>
+        <li>Generate reverse prompts.</li>
+        <li>Display results in the on-page analysis window and side collection UI.</li>
+        <li>Save prompt cards locally so the same user can reopen or copy them later.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>4. Third-Party AI Providers</h2>
+      <p>When the user starts an analysis with a supported API key, image data may be sent directly from the extension to the selected third-party AI provider.</p>
+      <p>Current provider support:</p>
+      <ul>
+        <li>Gemini</li>
+      </ul>
+      <p>Planned future providers may include OpenAI, Qwen, and GLM.</p>
+      <div class="note">
+        The developer does not proxy, relay, or store these requests on a developer-owned server. Each provider processes data according to its own terms and privacy policy.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>5. API Key Handling</h2>
+      <ul>
+        <li>API keys are stored in <code>chrome.storage.session</code>.</li>
+        <li>They are intended to be available only to trusted extension contexts.</li>
+        <li>They are not intentionally exposed to webpage scripts.</li>
+        <li>They are not transmitted to the developer.</li>
+        <li>They are cleared automatically when the browser session ends.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>6. Local Storage</h2>
+      <p>The extension stores some non-server data locally in the browser, including:</p>
+      <ul>
+        <li>Latest analysis result.</li>
+        <li>Saved prompt collection cards.</li>
+        <li>Panel UI state and layout preferences.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>7. Data Sharing</h2>
+      <p>The extension does not sell user data.</p>
+      <p>Data is shared only when necessary to complete the user-requested image analysis with the selected third-party model provider.</p>
+    </section>
+
+    <section class="section">
+      <h2>8. User Control</h2>
+      <ul>
+        <li>Users may choose whether to provide an API key.</li>
+        <li>Users may clear locally saved prompt collection data.</li>
+        <li>Users may stop using the extension at any time.</li>
+        <li>Users may remove the extension entirely from Chrome.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>9. Contact</h2>
+      <p><strong>Contact:</strong> <a href="mailto:gdrogonchen@gmail.com">gdrogonchen@gmail.com</a></p>
+    </section>
+  </main>
+</body>
+</html>
